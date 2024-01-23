@@ -1,0 +1,188 @@
+* {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background{
+    height: 100vh;
+    width: 100vw;
+    background: url("/img/forestFlappyBird.jpg")no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+}
+
+.character {
+    height: 100px;
+    width: 130px;
+    position: fixed;
+    top: 40vh;
+    left: 30vw;
+    z-index: 100;
+}
+
+.pipe_sprite {
+    position: fixed;
+    top: 40vh;
+    left: 100vh;
+    height: 70vh;
+    width: 6vw;
+    background: radial-gradient(darkRed 50%, red);
+    border: 5px solid black;
+}
+
+.msg {
+    position: absolute;
+    z-index: 10;
+    color:darkred;
+    top: 22vw;
+    left: 47vw;
+    transform: translate(-50px, -50px);
+    text-align: center;
+    line-height: 25px;
+    height: 140px;
+    width: 115px;
+}
+
+.msgStyle{
+    background: black;
+    padding: 30px;
+    box-shadow: 0 0 5px darkred, 0 0 10px black, 0 0 15px black, 0 0 20px black, 0 0 25px black, 0 0 30px black, 0 0 35px black;    
+    border-radius: 20%;
+    width: 220px;
+    top: 20vw;
+    left: 45vw;
+    text-align: center;
+    animation: pulse 1.5s infinite cubic-bezier(0.66,0,0,1);
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 45px rgba(238, 235, 235, 0);
+    }
+}
+
+.score {
+    position: fixed;
+    z-index: 10;
+    height: 10vh;
+    font-size: 10vh;
+    font-weight: 100;
+    color: darkred;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    width: 300px;
+}
+
+.scoreValue{
+    color: gold;
+    font-weight: bold;
+    top: 5px;
+    left: 250px;
+}
+
+.timer {
+    position: fixed;
+    z-index: 10;
+    height: 10%;
+    font-size: 50px;
+    font-weight: 1000;
+    color: darkred;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    top: 0;
+    left: 75%;
+    margin: 10px;
+    width: 500px;
+}
+
+.death {
+    position: fixed;
+    z-index: 10;
+    height: 10%;
+    font-size: 30px;
+    font-weight: 800;
+    color: darkred;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    top: 91%;
+    left: 0;
+    margin: 10px;
+    width: 300px;
+}
+
+.timer, .death {
+    display: none;
+}
+
+.resume {
+    position: fixed;
+    z-index: 10;
+    font-weight: 0; 
+    font-size: 14px; 
+    background: linear-gradient(90deg, darkred 0%, red 100%); 
+    padding: 10px 50px; 
+    border: none; 
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px; 
+    border-radius: 50px; 
+    top: 42%;
+    left: 46%;
+    transition : 1000ms;   
+}
+.resume:hover{ 
+    transition : 1000ms; 
+    transform : translateY(-6px); 
+    background: linear-gradient(90deg, red 0%, darkred 100%); 
+    color: #ffffff; 
+    border: none;     
+}
+
+.restart {
+    position: fixed;
+    z-index: 10;
+    font-weight: 0; 
+    font-size: 14px; 
+    background: linear-gradient(90deg, darkred 0%, red 100%); 
+    padding: 10px 50px; 
+    border: none; 
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px; 
+    border-radius: 50px; 
+    top: 50%;
+    left: 46.2%;
+    transition : 1000ms;   
+}
+.restart:hover{ 
+    transition : 1000ms; 
+    transform : translateY(-6px); 
+    background: linear-gradient(90deg, red 0%, darkred 100%); 
+    color: #ffffff; 
+    border: none;     
+}
+
+@media only screen and (max-width : 1080px){
+    .msg {
+        font-size: 15px;
+        top: 30vw;
+        white-space: nowrap;
+    }
+    .score{
+        font-size: 8vh;
+    }
+    .timer {
+        font-size: 8vh;
+    }
+    .character{
+        width: 120px;
+        height: 90px;
+    }
+    .pipeSprite{
+        width: 14vw;
+    }
+}   

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/darkFlappyBird.png">
+    <title>DarkFlappyBird</title>
+    <link rel="stylesheet" href="/css/game.css">
+    <script src="/scripts/gameScript.js" defer></script>
+
+</head>
+
+<body>
+    <div class="background">
+        <!-- <video autoplay muted loop id="backgroundVideo">
+            <source src="/video/bgFlappyBirdJS.mp4" type="video/mp4">
+        </video>-->
+    </div>
+    <img src="/img/darkFlappyBird.png" alt="invalid-img" class="character" id="character-Bird">
+    <div class="msg">
+        Press Enter To Begin <p><span style="color:red">‎ ‎&uarr;</span>‎ ‎ ‎ ‎ ArrowUp
+            To Control</p>
+    </div>
+    <div class="score">
+        <span class="scoreTitle"></span>
+        <span class="scoreValue"></span>
+    </div>
+    <div class="timer" style="display: none;">
+        Time :&nbsp;<span id="time">0</span>&nbsp;&nbsp;&nbsp;&nbsp;sec
+    </div>
+    <div class="death" style="display: none;">
+        Died :&nbsp;<span id="deathCount">0</span>&nbsp;&nbsp;&nbsp;&nbsp;times
+    </div>
+    <div id="pause-menu" style="display:none">
+        <button class="resume" id="resume-button">Resume</button>
+        <button class="restart" id="restart-button">Restart</button>
+    </div>
+</body>
+
+
+</html>
